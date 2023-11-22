@@ -11,6 +11,5 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = lombok.AccessLevel.PRIVATE)
 public class Customers {
     Long id;
-    int clientNumbers;
-    long tableId;
+    String email;
 }

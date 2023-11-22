@@ -9,4 +9,6 @@ public interface CustomersRepository {
     Optional <Customers> getCustomer(Long customerId);
 
     boolean updateCustomer(Customers customer);
+
+    Long createCustomer(String email);
 }

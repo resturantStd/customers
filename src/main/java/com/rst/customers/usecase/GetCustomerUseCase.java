@@ -2,7 +2,9 @@ package com.rst.customers.usecase;
 
 import com.rst.customers.core.model.Customers;
 import com.rst.customers.usecase.port.CustomersRepository;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class GetCustomerUseCase {
 
     private final CustomersRepository customersRepository;
@@ -12,6 +14,9 @@ public class GetCustomerUseCase {
     }
 
     public Customers getById(Long id) {
-        return customersRepository.getCustomer(id).orElseThrow();
+        log.info("Getting customer with id {}", id);
+        return customersRepository
+                .getCustomer(id)
+                .orElseThrow();
     }
 }
