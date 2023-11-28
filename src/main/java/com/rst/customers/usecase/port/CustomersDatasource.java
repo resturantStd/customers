@@ -4,7 +4,7 @@ import com.rst.customers.core.model.Customers;
 
 import java.util.Optional;
 
-public interface CustomersRepository {
+public interface CustomersDatasource {
 
     Optional <Customers> getCustomer(Long customerId);
 

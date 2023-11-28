@@ -1,0 +1,24 @@
+server:
+  port: 8091
+spring:
+  docker:
+    compose:
+      enabled: true
+      file: docker-compose.yml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/customers?useSSL=false
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/customers?useSSL=false
+    user: postgres
+    password: postgres
+    locations: classpath:db/migration
+flyway:
+  enabled: true
+  url: jdbc:postgresql://localhost:5432/customers?useSSL=false
+  user: postgres
+  password: postgres
+  locations: classpath:db/migration
